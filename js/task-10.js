@@ -22,12 +22,12 @@ function createBoxes(amount) {
   return htmlContent;
 }
 
-btnCreate.addEventListener('click', event => {
+btnCreate.addEventListener('click', () => {
   const amount = inputAmount.value;
   const htmlContent = createBoxes(amount);
   elemBoxes.innerHTML = htmlContent;
 })
 
-btnDestroy.addEventListener('click', event => {
+btnDestroy.addEventListener('click', () => {
   elemBoxes.innerHTML = '';
 })

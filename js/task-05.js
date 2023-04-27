@@ -1,6 +1,6 @@
 const input = document.body.querySelector('#name-input');
 const output = document.body.querySelector('#name-output');
 
-input.addEventListener('input', e => {
-	output.textContent = e.currentTarget.value || 'Anonymous';
+input.addEventListener('input', event => {
+	output.textContent = event.currentTarget.value || 'Anonymous';
 })

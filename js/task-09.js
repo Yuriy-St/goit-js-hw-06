@@ -9,7 +9,7 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 
-btnChangeColor.addEventListener('click', event => {
+btnChangeColor.addEventListener('click', () => {
   const color = getRandomHexColor();
   textColor.innerText = color;
   body.style.backgroundColor = color;

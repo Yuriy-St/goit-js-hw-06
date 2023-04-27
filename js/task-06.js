@@ -1,8 +1,8 @@
 const inputField = document.body.querySelector('#validation-input');
 const symbolLimit = inputField.dataset.length;
 
-inputField.addEventListener('blur', e => {
-	const thisField = e.target;
+inputField.addEventListener('blur', event => {
+	const thisField = event.target;
 	const valueLength = thisField.value.length;
 	console.log(thisField.value);
 	if (valueLength === 0) {
