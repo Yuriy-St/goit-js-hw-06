@@ -1,8 +1,8 @@
-const elemBoxes = document.body.querySelector('div#boxes');
-const controls = document.body.querySelector('div#controls');
-const inputAmount = controls.querySelector('input:first-of-type');
-const btnCreate = controls.querySelector('[data-create]');
-const btnDestroy = controls.querySelector('[data-destroy]');
+const elemBoxesEl = document.body.querySelector('div#boxes');
+const controlsEl = document.body.querySelector('div#controls');
+const inputAmountEl = controlsEl.querySelector('input:first-of-type');
+const btnCreateEl = controlsEl.querySelector('[data-create]');
+const btnDestroyEl = controlsEl.querySelector('[data-destroy]');
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -22,12 +22,12 @@ function createBoxes(amount) {
   return htmlContent;
 }
 
-btnCreate.addEventListener('click', () => {
-  const amount = inputAmount.value;
+btnCreateEl.addEventListener('click', () => {
+  const amount = inputAmountEl.value;
   const htmlContent = createBoxes(amount);
-  elemBoxes.innerHTML = htmlContent;
+  elemBoxesEl.innerHTML = htmlContent;
 })
 
-btnDestroy.addEventListener('click', () => {
-  elemBoxes.innerHTML = '';
+btnDestroyEl.addEventListener('click', () => {
+  elemBoxesEl.innerHTML = '';
 })

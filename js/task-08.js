@@ -1,10 +1,10 @@
-const form = document.body.querySelector('form.login-form');
-const formElements = [...form.elements];
+const formEl = document.body.querySelector('form.login-form');
+const formElementsEl = [...formEl.elements];
 
-form.addEventListener('submit', event => {
+formEl.addEventListener('submit', event => {
 	event.preventDefault();
 	const data = {};
-	for (const element of formElements) {
+	for (const element of formElementsEl) {
 		if (!element.name && element.type !== 'input') continue;
 		if (!element.value) {
 			alert('All fields must be filled in!');
